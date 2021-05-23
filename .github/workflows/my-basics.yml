@@ -53,9 +53,9 @@ jobs:
         run : |
            echo " Var1 = ${{ env.VAR1" }}
            echo " VAR2 = ${{ env.VAR2 "}}
-           echo " VAR3 = $LOCAL_VARaaa"
+           echo " VAR3 = $LOCAL_VAR"
         env:
-           LOCAL_VARaaa: "This is Super Local Environment variable"
+           LOCAL_VAR: "This is Super Local Environment variable"
         
         
       - name: Printing Deployment package
