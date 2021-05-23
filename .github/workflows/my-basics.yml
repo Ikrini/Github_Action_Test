@@ -55,5 +55,8 @@ jobs:
       - name: Let's test some packages iof they are here 2
         run : zip
         
+      - name: Let's test some packages iof they are here 3
+        run : gcloud --version
+        
       
    
