@@ -4,7 +4,7 @@
 
 name: My-GitHubActions-Basics
 env:
-  APPLICATION_NAME    : "MyFlask"
+  APPLICATION_NAME    :  "MyFlask"
   DEPLOY_PACKAGE_NAME :  "flask-deploy-ver-${{ github.sha }}"
 
 on:
@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      
       - name: Print Hello Message
         run: echo "Hello World from testing_job"
         
@@ -42,8 +41,8 @@ jobs:
    runs-on: ubuntu-latest
    needs: [my_testing]
    env:
-       VAR1 : "this is Job level Variable1"
-       VAR2 : "This is Job level Variable2"
+      VAR1 : "this is Job level Variable1"
+      VAR2 : "This is Job level Variable2"
    
    steps:
       - name: Print Hello Message in Deploy
@@ -53,13 +52,13 @@ jobs:
         run : |
            echo " Var1 = ${{ env.VAR1" }}
            echo " VAR2 = ${{ env.VAR2 "}}
- #          echo " VAR3 = $LOCAL_VAR"
- #       env:
- #          LOCAL_VAR: "This is Super Local Environment variable"
+           echo " VAR3 = $LOCAL_VAR"
+        env:
+           LOCAL_VAR: "This is Super Local Environment variable"
         
         
       - name: Printing Deployment package
-        run : echo "Deploy package name is ${{ env.DEPLOY_PACKAGE_NAME}}"
+        run : echo "Deploy package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
         
       - name: Let's test some packages iof they are here 1
         run : aws --version
