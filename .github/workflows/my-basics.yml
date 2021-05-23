@@ -65,7 +65,7 @@ jobs:
         run : aws --version
         
       - name: Let's test some packages iof they are here 2
-        run : zip
+        run : zip --version
         
       - name: Let's test some packages iof they are here 3
         run : gcloud --version
